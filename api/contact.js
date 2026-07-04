@@ -1,20 +1,28 @@
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
+const SITE_URL = "https://www.luciddreamingamsterdam.nl/";
+const PROFILE_IMAGE_URL = `${SITE_URL}figures/karine-miras-lucid-dreaming-amsterdam-portrait.png`;
 
 const replyCopy = {
   workshop_waiting_list: {
     subject: "Workshop waiting list confirmation",
-    text:
-      "Thank you for joining the Lucid Dreaming Workshop waiting list.\n\nI will let you know when the workshop date is available.\n\nKarine"
+    text: (name) =>
+      `Dear ${name},\n\nThank you for joining the Lucid Dreaming Workshop waiting list.\n\nI will let you know when the workshop date is available.\n\nYou can return to the website here:\n${SITE_URL}\n\nWarmly,\nKarine Miras`,
+    html: (name) =>
+      confirmationHtml(name, "Thank you for joining the Lucid Dreaming Workshop waiting list.", "I will let you know when the workshop date is available.")
   },
   coaching_availability: {
     subject: "Coaching request confirmation",
-    text:
-      "Thank you for your interest in lucid dreaming coaching.\n\nI will let you know when I am available for coaching.\n\nKarine"
+    text: (name) =>
+      `Dear ${name},\n\nThank you for your interest in lucid dreaming coaching.\n\nI will let you know when I am available for coaching.\n\nYou can return to the website here:\n${SITE_URL}\n\nWarmly,\nKarine Miras`,
+    html: (name) =>
+      confirmationHtml(name, "Thank you for your interest in lucid dreaming coaching.", "I will let you know when I am available for coaching.")
   },
   general_contact: {
     subject: "Message received",
-    text:
-      "Thank you for your message.\n\nI will get back to you when I can.\n\nKarine"
+    text: (name) =>
+      `Dear ${name},\n\nThank you for your message.\n\nI will get back to you when I can.\n\nYou can return to the website here:\n${SITE_URL}\n\nWarmly,\nKarine Miras`,
+    html: (name) =>
+      confirmationHtml(name, "Thank you for your message.", "I will get back to you when I can.")
   }
 };
 
@@ -45,6 +53,27 @@ function escapeHtml(value) {
 
 function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function confirmationHtml(name, firstLine, secondLine) {
+  const safeName = escapeHtml(name);
+  const safeFirstLine = escapeHtml(firstLine);
+  const safeSecondLine = escapeHtml(secondLine);
+
+  return `
+    <div style="margin:0;padding:28px;background:#faf5ef;color:#2d2926;font-family:Arial,sans-serif;line-height:1.6;">
+      <div style="max-width:560px;margin:0 auto;padding:28px;border-radius:18px;background:#fffaf5;border:1px solid rgba(74,57,42,0.12);">
+        <img src="${PROFILE_IMAGE_URL}" alt="Karine Miras" style="display:block;width:140px;max-width:100%;border-radius:90px 90px 16px 16px;margin:0 auto 22px;" />
+        <p style="margin:0 0 16px;font-size:18px;">Dear ${safeName},</p>
+        <p style="margin:0 0 12px;">${safeFirstLine}</p>
+        <p style="margin:0 0 22px;">${safeSecondLine}</p>
+        <p style="margin:0 0 22px;">
+          <a href="${SITE_URL}" style="display:inline-block;padding:12px 18px;border-radius:10px;background:#a95f31;color:#fffaf5;text-decoration:none;font-weight:700;">Visit the website</a>
+        </p>
+        <p style="margin:0;">Warmly,<br />Karine Miras</p>
+      </div>
+    </div>
+  `;
 }
 
 async function sendEmail(apiKey, payload) {
@@ -118,7 +147,8 @@ module.exports = async function handler(req, res) {
       from: fromEmail,
       to: email,
       subject: confirmation.subject,
-      text: confirmation.text
+      text: confirmation.text(name),
+      html: confirmation.html(name)
     });
 
     res.status(303).setHeader("Location", `/thank-you.html?type=${encodeURIComponent(inquiryType)}`);
