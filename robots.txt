@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://luciddreamingamsterdam.nl/sitemap.xml
+Sitemap: https://www.luciddreamingamsterdam.nl/sitemap.xml
