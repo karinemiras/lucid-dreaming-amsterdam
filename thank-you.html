@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | Lucid Dreaming in Amsterdam</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/svg+xml" href="figures/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Petit+Formal+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="form-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand brand-header" href="index.html#top">
+          <span><span class="brand-highlight">Lucid</span> Dreaming in Amsterdam</span>
+        </a>
+        <div class="header-centerpiece">
+          <img
+            src="figures/astral-projection-floating-illustration.png"
+            alt="Floating illustration evoking out-of-body experience and astral projection"
+          />
+        </div>
+        <nav class="nav-links">
+          <a href="index.html#top">Home</a>
+          <a href="index.html#about-me">About Me</a>
+          <a href="index.html#workshops">Workshops</a>
+          <a href="index.html#coaching">Coaching</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="contact.html?type=contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section form-section thanks-section">
+          <p class="section-kicker">Thank You</p>
+          <h1 id="thanks-title">Message sent</h1>
+          <p id="thanks-message">Your message has been received.</p>
+          <div class="form-actions">
+            <a class="button button-primary" href="index.html#top">Back Home</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const thanksCopy = {
+        workshop: "You will receive a confirmation, and I will let you know when the workshop date is available.",
+        coaching: "You will receive a confirmation, and I will let you know when I am available for coaching.",
+        contact: "You will receive a confirmation, and I will get back to you when I can."
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get("type") || "contact";
+      document.getElementById("thanks-message").textContent = thanksCopy[type] || thanksCopy.contact;
+    </script>
+  </body>
+</html>

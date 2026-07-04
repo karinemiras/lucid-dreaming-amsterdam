@@ -1,0 +1,11 @@
+{
+  "name": "lucid-dreaming-amsterdam",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
