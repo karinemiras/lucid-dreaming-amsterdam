@@ -571,6 +571,45 @@ h1 {
   text-align: center;
 }
 
+.footer-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(74, 57, 42, 0.16);
+  border-radius: 50%;
+  color: #8f5633;
+  background: rgba(255, 250, 245, 0.72);
+  box-shadow: 0 14px 26px rgba(74, 57, 42, 0.1);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.instagram-link:hover,
+.instagram-link:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255, 250, 245, 0.92);
+  box-shadow: 0 18px 30px rgba(74, 57, 42, 0.14);
+}
+
+.instagram-link svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .form-page .page-shell {
   padding-bottom: 56px;
 }
