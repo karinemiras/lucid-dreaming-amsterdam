@@ -6,11 +6,11 @@
     <title>Lucid Dreaming in Amsterdam</title>
     <meta
       name="description"
-      content="Lucid dreaming, astral projection, and out-of-body experience workshops and online coaching with Karine Miras in Amsterdam. Free access is available for people with physical disabilities."
+      content="Lucid dreaming, astral projection, and out-of-body experience workshops in Amsterdam and online coaching across the Netherlands with Karine Miras. Free access is available for people with physical disabilities."
     />
     <meta
       name="keywords"
-      content="lucid dreaming Amsterdam, lucid dreaming coaching, lucid dreaming workshop,   physical disabilities activities Amsterdam,   disability integration,  out-of-body experience workshop, OBE, astral projection workshop, dream coaching"
+      content="lucid dreaming Amsterdam, lucid dreaming Netherlands, lucid dreaming Nederland, lucid dreaming coaching Netherlands, online lucid dreaming coaching, lucid dreaming workshop, physical disabilities activities Amsterdam, physical disabilities activities Netherlands, disability integration, out-of-body experience workshop, OBE, astral projection workshop, dream coaching"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.luciddreamingamsterdam.nl/" />
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Lucid Dreaming in Amsterdam | Workshops and Coaching with Karine Miras" />
     <meta
       property="og:description"
-      content="Lucid dreaming, astral projection, and out-of-body experience workshops and online coaching with Karine Miras in Amsterdam."
+      content="Lucid dreaming, astral projection, and out-of-body experience workshops in Amsterdam and online coaching across the Netherlands with Karine Miras."
     />
     <meta property="og:url" content="https://www.luciddreamingamsterdam.nl/" />
     <meta property="og:image" content="https://www.luciddreamingamsterdam.nl/figures/karine-miras-lucid-dreaming-amsterdam-portrait.png" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Lucid Dreaming in Amsterdam | Workshops and Coaching with Karine Miras" />
     <meta
       name="twitter:description"
-      content="Lucid dreaming, astral projection, and out-of-body experience workshops and online coaching with Karine Miras in Amsterdam."
+      content="Lucid dreaming, astral projection, and out-of-body experience workshops in Amsterdam and online coaching across the Netherlands with Karine Miras."
     />
     <meta name="twitter:image" content="https://www.luciddreamingamsterdam.nl/figures/karine-miras-lucid-dreaming-amsterdam-portrait.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -47,8 +47,8 @@
         "name": "Lucid Dreaming in Amsterdam",
         "url": "https://www.luciddreamingamsterdam.nl/",
         "image": "https://www.luciddreamingamsterdam.nl/figures/karine-miras-lucid-dreaming-amsterdam-portrait.png",
-        "description": "Lucid dreaming, astral projection, and out-of-body experience workshops and online coaching with Karine Miras in Amsterdam. Free access is available for people with physical disabilities.",
-        "keywords": "lucid dreaming Amsterdam, paid lucid dreaming workshop, paid dream coaching, physical disabilities activities Amsterdam,   disability integration, out-of-body experience, OBE, astral projection, dream coaching",
+        "description": "Lucid dreaming, astral projection, and out-of-body experience workshops in Amsterdam and online coaching across the Netherlands with Karine Miras. Free access is available for people with physical disabilities.",
+        "keywords": "lucid dreaming Amsterdam, lucid dreaming Netherlands, lucid dreaming Nederland, paid lucid dreaming workshop, paid dream coaching, online lucid dreaming coaching Netherlands, physical disabilities activities Amsterdam, physical disabilities activities Netherlands, disability integration, out-of-body experience, OBE, astral projection, dream coaching",
         "priceRange": "€0-€60",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -70,7 +70,16 @@
             }
           ]
         },
-        "areaServed": "Amsterdam",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Amsterdam"
+          },
+          {
+            "@type": "Country",
+            "name": "Netherlands"
+          }
+        ],
         "audience": {
           "@type": "Audience",
           "audienceType": "People with physical disabilities seeking accessible activities, personal growth, social integration, and inner exploration"
@@ -203,14 +212,10 @@ It is possible to experience reality in such an ineffable manner that it would c
             <figure class="portrait portrait-soft">
               <img src="figures/karine-miras-about-me-dream-wall-bright.png" alt="Karine Miras seated in front of a dreamlike mural" />
               <div class="about-video" aria-label="Lucid dreaming art video by Karine Miras">
-                <iframe
-                  src="https://www.youtube.com/embed/K4UYkKREGv0?si=s4oolnGJnesBNLvc"
-                  title="Lucid dreaming art video by Karine Miras"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
+                <button class="video-thumbnail" type="button" data-video-id="K4UYkKREGv0" aria-label="Play lucid dreaming art video">
+                  <img src="figures/lucid-dreaming-art-video-thumbnail.png" alt="Still image from Karine Miras lucid dreaming art video" />
+                  <span class="video-play" aria-hidden="true"></span>
+                </button>
               </div>
             </figure>
           </div>
@@ -275,6 +280,7 @@ Having experienced their transformative potential firsthand, I now wish to share
               <h3>Techniques</h3>
               <p>
                We address both the theoretical and the practical aspects of the practice. This includes guided exercises of different techniques.
+               <a class="card-link" href="learn-more.html">Learn more</a>
               </p>
               <img class="card-illustration" src="figures/techniques-illustration.svg" alt="Hand illustration for techniques" />
             </article>
@@ -405,5 +411,20 @@ surrounding these experiences do not limit our connection or our ability to lear
 
       </main>
     </div>
+    <script>
+      document.querySelectorAll(".video-thumbnail").forEach((button) => {
+        button.addEventListener("click", () => {
+          const videoId = button.dataset.videoId;
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&si=s4oolnGJnesBNLvc`;
+          iframe.title = "Lucid dreaming art video by Karine Miras";
+          iframe.loading = "lazy";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.referrerPolicy = "strict-origin-when-cross-origin";
+          iframe.allowFullscreen = true;
+          button.replaceWith(iframe);
+        });
+      });
+    </script>
   </body>
 </html>
