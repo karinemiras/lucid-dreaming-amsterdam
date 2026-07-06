@@ -299,6 +299,10 @@ h1 {
   margin-top: 12px;
 }
 
+.hero-actions-mobile {
+  display: none;
+}
+
 .hero-note {
   display: inline-flex;
   align-items: center;
@@ -1084,6 +1088,24 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
   .hero {
     gap: 28px;
     padding-bottom: 28px;
+  }
+
+  .hero-actions-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 14px;
+  }
+
+  .hero-actions-mobile .hero-note {
+    flex-basis: auto;
+    justify-content: center;
+    max-width: 28ch;
+    padding: 0.32em 0.72em 0.38em;
+    text-align: center;
+  }
+
+  .hero-actions-mobile .hero-note::before {
+    display: none;
   }
 
   .hero-note {
