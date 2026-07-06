@@ -1065,12 +1065,15 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
 
   .title-focus {
     gap: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: 1.06rem;
   }
 
   .title-icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
 
   h1 {
@@ -1108,5 +1111,21 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
   .section {
     padding: 24px;
     border-radius: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .top-title-bar {
+    padding-inline: 12px;
+  }
+
+  .title-focus {
+    gap: 5px;
+    font-size: 0.98rem;
+  }
+
+  .title-icon {
+    width: 21px;
+    height: 21px;
   }
 }
