@@ -1109,6 +1109,10 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
     display: none;
   }
 
+  .hero-copy > .hero-actions:not(.hero-actions-mobile) {
+    display: none;
+  }
+
   .hero-note {
     flex-basis: 100%;
   }
