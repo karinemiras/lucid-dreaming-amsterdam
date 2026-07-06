@@ -1099,7 +1099,8 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
   .hero-actions-mobile .hero-note {
     flex-basis: auto;
     justify-content: center;
-    max-width: 28ch;
+    width: min(100%, 34ch);
+    max-width: 100%;
     padding: 0.32em 0.72em 0.38em;
     text-align: center;
   }
