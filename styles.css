@@ -1086,8 +1086,32 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
     padding-bottom: 28px;
   }
 
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-actions {
+    order: -1;
+    justify-content: center;
+    margin: 0 0 14px;
+  }
+
   .hero-note {
     flex-basis: 100%;
+  }
+
+  .hero-actions .hero-note {
+    flex-basis: auto;
+    justify-content: center;
+    width: min(100%, 34ch);
+    max-width: 100%;
+    padding: 0.32em 0.72em 0.38em;
+    text-align: center;
+  }
+
+  .hero-actions .hero-note::before {
+    display: none;
   }
 
   .hero-visual {
