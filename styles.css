@@ -248,7 +248,7 @@ h1 {
 
 .hero-body {
   max-width: 88ch;
-  margin: 16px 0 0;
+  margin: 10px 0 0;
   font-family: "Forum", serif;
   font-size: 1.18rem;
   font-weight: 400;
@@ -296,7 +296,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
-  margin-top: 12px;
+  margin-top: 6px;
 }
 
 .hero-note {
