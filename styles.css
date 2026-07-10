@@ -691,7 +691,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.instagram-link {
+.social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -705,14 +705,14 @@ h1 {
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-.instagram-link:hover,
-.instagram-link:focus-visible {
+.social-link:hover,
+.social-link:focus-visible {
   transform: translateY(-1px);
   background: rgba(255, 250, 245, 0.92);
   box-shadow: 0 18px 30px rgba(74, 57, 42, 0.14);
 }
 
-.instagram-link svg {
+.social-link svg {
   width: 24px;
   height: 24px;
   fill: none;
