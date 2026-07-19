@@ -902,7 +902,7 @@ h1 {
 .thanks-section h1 {
   max-width: none;
   margin-top: 10px;
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
 }
 
 .thanks-section p:not(.section-kicker) {
