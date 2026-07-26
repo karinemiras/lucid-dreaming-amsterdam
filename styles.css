@@ -49,6 +49,8 @@ a {
 }
 
 .site-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,8 +132,27 @@ a {
   filter: drop-shadow(0 8px 14px rgba(184, 133, 90, 0.12));
 }
 
+.levitation-arrival {
+  animation: levitation-arrive 4.8s linear both;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+@keyframes levitation-arrive {
+  0% {
+    opacity: 0.92;
+    transform: translateY(84px) scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1.08);
+  }
+}
+
 .top-title-bar {
   position: relative;
+  z-index: 3;
   overflow: hidden;
   margin-bottom: 7px;
   padding: 13px 24px;
@@ -1137,6 +1158,22 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
     object-position: center;
   }
 
+  .levitation-arrival {
+    animation-name: levitation-arrive-mobile;
+  }
+
+  @keyframes levitation-arrive-mobile {
+    0% {
+      opacity: 0.92;
+      transform: translateY(58px) scale(1.04);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1.04);
+    }
+  }
+
   .nav-links {
     width: 100%;
     gap: 8px 16px;
@@ -1163,6 +1200,19 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
 
   .hero-actions {
     justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .levitation-arrival {
+    animation: none;
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+  .levitation-arrival {
+    transform: scale(1.04);
   }
 }
 
