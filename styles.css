@@ -618,6 +618,33 @@ h1 {
   text-underline-offset: 0.18em;
 }
 
+.request-link,
+.request-link:visited {
+  color: #8e542f;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.request-link:hover,
+.request-link:focus-visible {
+  color: #6f3f24;
+}
+
+.disability-highlight {
+  color: #7a5138;
+  font-weight: 600;
+}
+
+.workshop-divider {
+  width: min(82%, 760px);
+  height: 2px;
+  margin: 16px auto 0;
+  border: 0;
+  background: linear-gradient(90deg, transparent, rgba(122, 81, 56, 0.48), transparent);
+}
+
 .info-card,
 .practice-item {
   padding: 24px;
