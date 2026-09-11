@@ -154,7 +154,7 @@
           <a href="#top">Home</a>
           <a href="#about-me">About</a>
           <a href="#workshops">Workshops</a>
-          <a href="#coaching">Coaching</a>
+          <a href="#coaching">Free Disability Coaching</a>
           <a href="#faq">FAQ</a>
           <a href="art.html">Art</a>
           <a href="#contact">Contact</a>
@@ -230,10 +230,13 @@ It is possible to experience your inner reality in such an ineffable manner that
           <div class="intro-portrait">
             <figure class="portrait portrait-soft">
               <div class="about-video" aria-label="Lucid dreaming art video by Karine Miras">
-                <button class="video-thumbnail" type="button" data-video-id="K4UYkKREGv0" aria-label="Play lucid dreaming art video">
-                  <img src="figures/lucid-dreaming-art-video-thumbnail.png" alt="Still image from Karine Miras lucid dreaming art video" />
-                  <span class="video-play" aria-hidden="true"></span>
-                </button>
+                <iframe
+                  src="https://www.youtube.com/embed/K4UYkKREGv0?autoplay=1&mute=1&playsinline=1&si=s4oolnGJnesBNLvc"
+                  title="Lucid dreaming art video by Karine Miras"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
               <img src="figures/karine-miras-about-me-dream-wall-bright.png" alt="Karine Miras seated in front of a dreamlike mural" />
             </figure>
@@ -242,7 +245,7 @@ It is possible to experience your inner reality in such an ineffable manner that
             <p class="section-kicker">About</p>
              
             <p>
-          
+
           Lucid dreaming (LD) and out-of-body experiences (OBEs) are altered states of consciousness.
       LD is the experience of becoming aware that you are dreaming while the dream is still unfolding,
      or of entering a dream directly from wakefulness while remaining fully conscious. 
@@ -339,13 +342,13 @@ Having experienced their transformative potential firsthand, I now wish to share
         </section>
 
         <section class="section cards-section" id="coaching">
-          <p class="section-kicker">Coaching for people with <span class="disability-highlight">physical disabilities</span></p>
+          <p class="section-kicker">Free coaching for people with <span class="disability-highlight">physical disabilities</span></p>
           <p class="section-intro">Individual sessions with <b>personalized guidance</b> for the practice of altered states of consciousness such as lucid dreaming and out-of-body experiences.</p>
           <div class="section-note" data-nosnippet>
 
             <span class="detail-line"><b>When:</b> weekends, by appointment</span>
             <span class="detail-line"><b>Location:</b> online</span>
-            <span class="detail-line"><b>Duration:</b> one hour</span>
+            <span class="detail-line"><b>Duration:</b> two sessions (one or two hours per session)</span>
             <span class="detail-line"><b>Cost:</b> free</span>
            Two sessions are offered free of charge for people with physical disabilities (<a class="request-link" href="contact.html?type=coaching-disability">request here</a>).
 
@@ -482,23 +485,16 @@ about these experiences do not limit our connection or our ability to learn from
           </div>
         </section>
 
+        <section class="section testimonials-section" aria-labelledby="testimonials-title">
+          <p class="section-kicker">Testimonials</p>
+
+          <p>
+            Have you attended a workshop or had a coaching session with Karine?<br/> You can write about your experience here.
+          </p>
+          <a class="button button-primary" href="contact.html?type=testimonial">Write a testimonial</a>
+        </section>
+
       </main>
     </div>
-    <script>
-      document.querySelectorAll(".video-thumbnail").forEach((button) => {
-        button.addEventListener("click", () => {
-          const videoId = button.dataset.videoId;
-          const iframe = document.createElement("iframe");
-          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&si=s4oolnGJnesBNLvc`;
-          iframe.title = "Lucid dreaming art video by Karine Miras";
-          iframe.loading = "lazy";
-          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-          iframe.referrerPolicy = "strict-origin-when-cross-origin";
-          iframe.allowFullscreen = true;
-          button.replaceWith(iframe);
-        });
-      });
-
-    </script>
   </body>
 </html>

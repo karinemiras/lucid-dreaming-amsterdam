@@ -17,6 +17,13 @@ const replyCopy = {
     html: (name) =>
       confirmationHtml(name, "Thank you for your interest in lucid dreaming coaching.", "I will let you know when I am available for coaching.")
   },
+  testimonial_submission: {
+    subject: "Testimonial received",
+    text: (name) =>
+      `Dear ${name},\n\nThank you for sharing your experience with me.\n\nI truly appreciate your testimonial.\n\nWarmly,\nKarine Miras\n\n${SITE_URL}`,
+    html: (name) =>
+      confirmationHtml(name, "Thank you for sharing your experience with me.", "I truly appreciate your testimonial.")
+  },
   general_contact: {
     subject: "Message received",
     text: (name) =>

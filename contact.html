@@ -96,7 +96,7 @@
             </label>
 
             <label class="form-field form-field-message">
-              <span>Message</span>
+              <span id="message-label">Message</span>
               <textarea name="message" id="message" rows="8" required></textarea>
             </label>
 
@@ -151,6 +151,16 @@
           message:
             "Hello Karine,\n\nI am interested in lucid dreaming coaching and would love to learn more about working with you. Please let me know about availability, format, and next steps.\n\nThank you,"
         },
+        testimonial: {
+          kicker: "Testimonials",
+          title: "Write a Testimonial",
+          subtitle: "Share your experience of attending a workshop or having a coaching session with Karine. It can be short—even just a couple of sentences.",
+          inquiryType: "testimonial",
+          replyContext: "testimonial_submission",
+          button: "Send Testimonial",
+          messageLabel: "Your testimonial",
+          message: ""
+        },
         contact: {
           kicker: "Contact",
           title: "Connect with Karine",
@@ -158,6 +168,7 @@
           inquiryType: "contact",
           replyContext: "general_contact",
           button: "Send Message",
+          messageLabel: "Message",
           message:
             "Hello Karine,\n\nI would love to connect about lucid dreaming, astral projection, or out-of-body experiences.\n\nThank you,"
         }
@@ -173,6 +184,7 @@
       document.getElementById("inquiry-type").value = copy.inquiryType;
       document.getElementById("reply-context").value = copy.replyContext;
       document.getElementById("submit-button").textContent = copy.button;
+      document.getElementById("message-label").textContent = copy.messageLabel || "Message";
       document.getElementById("message").value = copy.message;
     </script>
   </body>

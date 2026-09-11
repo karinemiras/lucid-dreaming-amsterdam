@@ -299,7 +299,7 @@
 
           if (button.dataset.artType === "video") {
             const iframe = document.createElement("iframe");
-            iframe.src = `https://www.youtube.com/embed/${button.dataset.videoId}?autoplay=1&si=s4oolnGJnesBNLvc`;
+            iframe.src = `https://www.youtube.com/embed/${button.dataset.videoId}?autoplay=1&mute=1&playsinline=1&si=s4oolnGJnesBNLvc`;
             iframe.title = button.dataset.title || "Art video";
             iframe.loading = "lazy";
             iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";

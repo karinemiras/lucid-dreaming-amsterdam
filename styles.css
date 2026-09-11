@@ -132,6 +132,23 @@ a {
   filter: drop-shadow(0 8px 14px rgba(184, 133, 90, 0.12));
 }
 
+@media (min-width: 901px) {
+  .brand-header {
+    flex-basis: 320px;
+  }
+
+  .header-centerpiece {
+    flex-basis: 245px;
+    margin-left: -20px;
+  }
+
+  .nav-links {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    font-size: clamp(1.12rem, 1.55vw, 1.34rem);
+  }
+}
+
 .levitation-arrival {
   animation: levitation-arrive 4.8s linear both;
   transform-origin: center;
@@ -883,6 +900,27 @@ h1 {
 .closing-copy {
   order: 1;
   text-align: center;
+}
+
+.testimonials-section {
+  padding: 48px 34px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.82), transparent 52%),
+    var(--panel-strong);
+}
+
+.testimonials-section h2 {
+  margin-top: 10px;
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+}
+
+.testimonials-section p:not(.section-kicker) {
+  max-width: 650px;
+  margin: 14px auto 24px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 .footer-actions {
