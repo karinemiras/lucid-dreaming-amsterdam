@@ -398,6 +398,11 @@ h1 {
   color: var(--text);
 }
 
+.workshop-share-button {
+  cursor: pointer;
+  font: inherit;
+}
+
 .hero-visual {
   position: relative;
   min-height: 353px;
@@ -626,6 +631,12 @@ h1 {
   background: linear-gradient(90deg, rgba(168, 116, 77, 0.06), rgba(168, 116, 77, 0.18) 28%, rgba(168, 116, 77, 0.12) 78%, rgba(168, 116, 77, 0.04));
   color: #5f4634;
   line-height: 1.45;
+}
+
+.coaching-detail-line {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.65;
 }
 
 .section-note a {
