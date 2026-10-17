@@ -515,7 +515,7 @@ h1 {
 
 .portrait-soft img {
   display: block;
-  width: min(100%, 300px);
+  width: min(100%, 200px);
   margin: 0 auto;
   border-radius: 22px;
 }
