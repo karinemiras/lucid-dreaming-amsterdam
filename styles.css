@@ -1000,6 +1000,15 @@ h1 {
   line-height: 1.7;
 }
 
+.testimonials-photo {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 24px auto 30px;
+  border-radius: 24px;
+}
+
 .testimonial-card {
   max-width: 760px;
   margin: 24px auto 30px;
@@ -1540,5 +1549,27 @@ font-size: clamp(1.4rem, 3vw, 2.2rem);
   .title-icon {
     width: 21px;
     height: 21px;
+  }
+}
+
+.workshop-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.workshop-photos img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 24px;
+}
+
+@media (max-width: 600px) {
+  .workshop-photos {
+    grid-template-columns: 1fr;
   }
 }
