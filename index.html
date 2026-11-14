@@ -203,13 +203,13 @@ It is possible to experience your inner reality in such an ineffable manner that
                 <span>Join a workshop</span>
               </a>
               -->
-              <a class="button button-primary" href="https://hipsy.nl/event/237928-lucid-dreaming-out-of-body-experiences-workshop" target="_blank" rel="noopener">
+              <a class="button button-primary" href="contact.html?type=workshop">
                 <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
                   <path d="M10 17l5-5-5-5" />
                   <path d="M15 12H3" />
                 </svg>
-                <span>Book your workshop spot</span>
+                <span>Join waiting list</span>
               </a>
             </div>
           </div>
@@ -300,18 +300,13 @@ Having experienced their transformative potential firsthand, I now wish to share
               <hr class="workshop-divider" aria-label="End of workshop listing" />
 
               <div class="section-note" data-nosnippet>
+                <span class="workshop-sold-out">Sold out</span>
                 <span class="detail-line"><b>Date and time:</b> Saturday, 14th of November, from 15:00 to 18:00</span>
                 <span class="detail-line"><b>Location:</b> <a href="https://yogaspot.nl/" target="_blank" rel="noopener">Yoga Spot</a> - Laan der Hesperiden 142, 1076 DX, Amsterdam</span>
                 <span class="detail-line"><b>Cost:</b> €60 per person</span>
               </div>
               <div class="section-action">
-                <!--
-                <a
-                  class="button button-primary"
-                  href="contact.html?type=workshop"
-                >Join workshop waiting list</a>
-                -->
-                <a class="button button-primary" href="https://hipsy.nl/event/237928-lucid-dreaming-out-of-body-experiences-workshop" target="_blank" rel="noopener">Book now!</a>
+                <a class="button button-primary" href="contact.html?type=workshop">Join waiting list</a>
                 <button class="button button-secondary workshop-share-button" type="button" id="share-workshop">
                   <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                     <circle cx="18" cy="5" r="3" />
@@ -538,11 +533,11 @@ about these experiences do not limit our connection or our ability to learn from
         const shareButton = document.querySelector("#share-workshop");
         if (!shareButton) return;
 
-        const bookingUrl = "https://hipsy.nl/event/237928-lucid-dreaming-out-of-body-experiences-workshop";
+        const waitingListUrl = new URL("contact.html?type=workshop", window.location.href).href;
         const shareData = {
           title: "Lucid Dreaming & Out-of-Body Experiences Workshop",
-          text: "Lucid Dreaming & Out-of-Body Experiences Workshop in Amsterdam\nSaturday, 14 November · 15:00–18:00\nYoga Spot, Laan der Hesperiden 142\n€60 per person",
-          url: bookingUrl
+          text: "Lucid Dreaming & Out-of-Body Experiences Workshop in Amsterdam\nSaturday, 14 November · 15:00–18:00\nYoga Spot, Laan der Hesperiden 142\nSold out — join the waiting list for future dates",
+          url: waitingListUrl
         };
 
         shareButton.addEventListener("click", async () => {
@@ -555,7 +550,7 @@ about these experiences do not limit our connection or our ability to learn from
             }
           }
 
-          const whatsappMessage = `${shareData.text}\n\nBook here: ${bookingUrl}`;
+          const whatsappMessage = `${shareData.text}\n\nJoin waiting list: ${waitingListUrl}`;
           window.open(`https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`, "_blank", "noopener,noreferrer");
         });
       })();

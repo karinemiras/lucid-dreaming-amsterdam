@@ -680,6 +680,19 @@ h1 {
   align-items: center;
 }
 
+.workshop-sold-out {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  border: 1px solid #b91c1c;
+  border-radius: 999px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .workshop-access {
   margin: 20px 0 0;
   color: var(--muted);
